@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Clone</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <h1>ChatGPT Clone</h1>
+        <form method="POST">
+            <input type="text" name="user_input" placeholder="Ask me anything..." required>
+            <button type="submit">Send</button>
+        </form>
+        {% if response %}
+        <p class="response"><strong>ChatGPT:</strong> {{ response }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
